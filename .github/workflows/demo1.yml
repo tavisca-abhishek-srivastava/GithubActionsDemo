@@ -6,3 +6,5 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World Sir!"
+      - name: create file
+        run: echo "Abhishek" /tmp/name.txt
