@@ -6,7 +6,7 @@ jobs:
     steps:
       - 
         name: "Print message"
-        run:  echo "Hello Abhishek this is custom workflow"  
+        run:  echo "Hello Abhishek this is custom workflow so pls run it manually"  
       - 
         name:   multiline script
         run:    |
