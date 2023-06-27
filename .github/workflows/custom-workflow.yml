@@ -1,0 +1,17 @@
+name:   shell commands
+on: [workflow_dispatch] 
+jobs:
+  run-shell-commands:
+    runs-on:    ubuntu-latest
+    steps:
+      - 
+        name: string
+        run:  echo "Hello Abhishek this is custom workflow"  
+      - 
+        name:   multiline script
+        run:    |
+            node -v
+            npm -v
+    
+
+
