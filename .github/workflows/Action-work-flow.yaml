@@ -1,0 +1,45 @@
+name:   this is for checkout of repo
+on:
+    workflow_dispatch
+jobs:
+    list-repo-files:
+        runs-on:    ubuntu-latest
+        steps:
+            - 
+                name:   List Files before Checkout
+                run:    |
+                    pwd
+                    ls -al
+                    echo $GITHUB_SHA
+                    echo $GITHUB_REPOSITORY
+                    echo $GITHUB_WORKSPACE
+                    echo "${{ github.token }}"
+
+            -   
+                name:   checkout
+                uses:   actions/checkout@v1
+
+            -   
+                name:   List Files after Checkout
+                run:    |
+                    pwd
+                    ls -al
+
+    run-javascript-action:
+        runs-on:    ubuntu-latest
+        steps:
+            - 
+                name: Simple Java script Action
+                id: hello
+                uses: actions/hello-world-javascript-action
+                with:
+                    who-to-greet: tavisca-abhishek-srivastava
+
+            -   
+                name:   get the output
+                run:    echo "{{steps.hello.outputs.time}}"
+
+
+
+
+                
