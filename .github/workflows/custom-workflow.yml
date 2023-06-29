@@ -26,7 +26,6 @@ jobs:
         name: Print pwd
         run:  get-location
         shell: powershell
-      
       - 
         name: print computername
         run:  $env:COMPUTERNAME
