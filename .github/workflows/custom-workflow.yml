@@ -19,6 +19,18 @@ jobs:
           import platform
           print(platform.processor())
         shell: python
+  run-powershell-commands:
+    runs-on:  windows-latest
+    steps:
+      - 
+        name: Print pwd
+        run:  get-location
+        shell: powershell
+      
+      - 
+        name: print computername
+        run:  $env:COMPUTERNAME
+        shell: powershell
 
 
 
