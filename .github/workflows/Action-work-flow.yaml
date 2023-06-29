@@ -31,7 +31,7 @@ jobs:
             - 
                 name: Simple Java script Action
                 id: hello
-                uses: actions/hello-world-javascript-action
+                uses: actions/hello-world-javascript-action@v1
                 with:
                     who-to-greet: tavisca-abhishek-srivastava
 
